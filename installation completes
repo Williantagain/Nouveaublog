@@ -1,0 +1,116 @@
+Last login: Wed Oct 27 23:54:13 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+admins-iMac:~ admin$ CD ~
+admins-iMac:~ admin$ pwd
+/Users/admin
+admins-iMac:~ admin$ ls
+Applications	Downloads	Music		Sites
+Desktop		Library		Pictures	TAGAIN
+Documents	Movies		Public
+admins-iMac:~ admin$ cd tagain
+admins-iMac:tagain admin$ ls
+FREECODEUR	TechCube	musiques
+Softs		Video		test2
+admins-iMac:tagain admin$ cd freecodeur
+admins-iMac:freecodeur admin$ ls
+NATIVEWORKSPACE
+admins-iMac:freecodeur admin$ cd nativeworkspace
+admins-iMac:nativeworkspace admin$ ls
+1.0		IA ONLY		WEBONLY		lol
+HACKING ONLY	WEB ONLY	WEBZONE
+admins-iMac:nativeworkspace admin$ cd web only
+-bash: cd: web: No such file or directory
+admins-iMac:nativeworkspace admin$ cd -r  web only
+-bash: cd: -r: invalid option
+cd: usage: cd [-L|-P] [dir]
+admins-iMac:nativeworkspace admin$ cd webzone
+admins-iMac:webzone admin$ mkdir PROJETS
+admins-iMac:webzone admin$ CD..
+-bash: CD..: command not found
+admins-iMac:webzone admin$ CD ..
+admins-iMac:webzone admin$ cd ..
+admins-iMac:nativeworkspace admin$ cd webzone
+admins-iMac:webzone admin$ mkdir WORKSPACE
+admins-iMac:webzone admin$ CD ..
+admins-iMac:webzone admin$ CD WORKSPACE
+admins-iMac:webzone admin$ cd  WORKSPACE
+admins-iMac:WORKSPACE admin$ cd ..
+admins-iMac:webzone admin$ cd projets
+admins-iMac:projets admin$ mkdir projet01
+admins-iMac:projets admin$ cd projet01
+admins-iMac:projet01 admin$ python3 -m venv myvenv
+admins-iMac:projet01 admin$ source myvenv/bin/activate
+(myvenv) admins-iMac:projet01 admin$ python -m pip install --upgrade pip
+Requirement already satisfied: pip in ./myvenv/lib/python3.10/site-packages (21.2.3)
+Collecting pip
+  Downloading pip-21.3.1-py3-none-any.whl (1.7 MB)
+     |████████████████████████████████| 1.7 MB 541 kB/s
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 21.2.3
+    Uninstalling pip-21.2.3:
+      Successfully uninstalled pip-21.2.3
+Successfully installed pip-21.3.1
+(myvenv) admins-iMac:projet01 admin$ pip install -r requirements.txt
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+(myvenv) admins-iMac:projet01 admin$ pip install -r requirements.txt
+Collecting Django~=3.2.8
+  Downloading Django-3.2.8-py3-none-any.whl (7.9 MB)
+     |████████████████████████████████| 7.9 MB 1.6 MB/s
+Collecting sqlparse>=0.2.2
+  Downloading sqlparse-0.4.2-py3-none-any.whl (42 kB)
+     |████████████████████████████████| 42 kB 1.6 MB/s
+Collecting pytz
+  Downloading pytz-2021.3-py2.py3-none-any.whl (503 kB)
+     |████████████████████████████████| 503 kB 2.8 MB/s
+Collecting asgiref<4,>=3.3.2
+  Downloading asgiref-3.4.1-py3-none-any.whl (25 kB)
+Installing collected packages: sqlparse, pytz, asgiref, Django
+Successfully installed Django-3.2.8 asgiref-3.4.1 pytz-2021.3 sqlparse-0.4.2
+(myvenv) admins-iMac:projet01 admin$ git version
+git version 2.24.3 (Apple Git-128)
+(myvenv) admins-iMac:projet01 admin$ git update
+git: 'update' is not a git command. See 'git --help'.
+
+The most similar command is
+	update-ref
+(myvenv) admins-iMac:projet01 admin$ git version
+git version 2.24.3 (Apple Git-128)
+(myvenv) admins-iMac:projet01 admin$
+(myvenv) admins-iMac:projet01 admin$ ~/djangogirls$ django-admin startproject mysite .
+-bash: /Users/admin/djangogirls$: No such file or directory
+(myvenv) admins-iMac:projet01 admin$ django-admin startproject site1 .
+(myvenv) admins-iMac:projet01 admin$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(myvenv) admins-iMac:projet01 admin$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 28, 2021 - 08:24:50
+Django version 3.2.8, using settings 'site1.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
